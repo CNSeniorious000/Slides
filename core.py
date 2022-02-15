@@ -2,10 +2,9 @@ import ctypes
 import pyglet
 import glooey
 
-if "initialize":
-    assets_dir = "./assets"
-    pyglet.resource.path.append(assets_dir)
-    ctypes.windll.user32.SetProcessDPIAware(2)
+assets_dir = "./assets"
+pyglet.resource.path.append(assets_dir)
+ctypes.windll.user32.SetProcessDPIAware(2)
 
 
 def get_block(size, *color):
@@ -30,7 +29,7 @@ def get_block(size, *color):
         return pyglet.resource.texture(file_name)
 
 
-def get_bgd(inner, outer=None, *, size=1):
+def get_bgd(inner, outer=None, *, size=2):
     class _(glooey.Background):
         custom_center = get_block(size, *inner)
         if outer is not None:
@@ -54,3 +53,6 @@ def get_triplet(*color):
         get_bgd((*color, 30), (*color, 90)),
     )
 
+
+class VariableFont:
+    pass
