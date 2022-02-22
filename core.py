@@ -5,6 +5,14 @@ import glooey
 assets_dir = "./assets"
 pyglet.resource.path.append(assets_dir)
 ctypes.windll.user32.SetProcessDPIAware(2)
+factor = ctypes.windll.shcore.GetScaleFactorForDevice(0)
+
+
+def after_scale(*numbers):
+    if len(numbers) == 1:
+        return int(numbers[0] * factor // 100)
+    else:
+        return [int(number * factor // 100) for number in numbers]
 
 
 def get_block(size, *color):
@@ -83,6 +91,3 @@ class Button(glooey.Button):
         w, h = self.get_foreground().do_claim()
         margin = round(h * 1.25)
         self.set_size_hint(w + margin, h + margin)
-
-    def update(self):
-        pass
