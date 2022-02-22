@@ -4,4 +4,4 @@
     I may use many python3.9~python10 features for creating beautiful and robust code.
     So mind the python version before getting start.
 
-Getting Start
+正在进行：电子书阅读器APP的编写

@@ -78,7 +78,7 @@ if __name__ == '__main__':
     current_UI.add(get_bgd(bg_color)())
     current_UI.add(box := glooey.VBox())
 
-    box.add(s := EmphasizePushButton("适用大字号の按钮"))  # 这里出问题了，button不是gui的直系children
+    box.add(s := EmphasizePushButton("适用大字号の按钮"))
     box.add(SimplePushButton("适用稍小字号の按钮"))
 
     pyglet.app.run()
