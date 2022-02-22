@@ -19,7 +19,7 @@ class BlackOnWhiteButton(glooey.Button):
         custom_color = (0, 0, 0, 255)
         custom_alignment = "center"
 
-    Base, Over, Down = get_triplet(0)
+    Base, Over, Down = get_bgd_triplet(128)
 
     def on_mouse_enter(self, x, y):
         super().on_mouse_enter(x, y)

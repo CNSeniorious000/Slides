@@ -46,13 +46,43 @@ def get_bgd(inner, outer=None, *, size=2):
     return _
 
 
-def get_triplet(*color):
+def get_bgd_triplet(*color, bordered=True):
     return (
-        get_bgd((*color, 10)),
-        get_bgd((*color, 10), (*color, 30)),
-        get_bgd((*color, 30), (*color, 90)),
+        get_bgd((*color, 20)),
+        get_bgd((*color, 20), (*color, 60) if bordered else None),
+        get_bgd((*color, 60), (*color, 180) if bordered else None),
     )
 
 
 class VariableFont:
-    pass
+    def __init__(self, paths, min_, max_):
+        self.paths = paths
+        self.min = min_
+        self.max = max_
+        self.now = min_
+
+    @property
+    def heavier(self) -> str | None:
+        if self.now < self.max:
+            self.now += 1
+            return self.paths[self.now]
+
+    @property
+    def thinner(self) -> str | None:
+        if self.now > self.min:
+            self.now -= 1
+            return self.paths[self.now]
+
+
+class Button(glooey.Button):
+    def __init__(self, *args, **kwargs):
+        glooey.Button.__init__(self, *args, **kwargs)
+        self.fit()
+
+    def fit(self):
+        w, h = self.get_foreground().do_claim()
+        margin = round(h * 1.25)
+        self.set_size_hint(w + margin, h + margin)
+
+    def update(self):
+        pass
