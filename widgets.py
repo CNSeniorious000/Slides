@@ -2,7 +2,7 @@ from collections import deque
 from core import *
 import preset
 
-current_UI: "UI" = None
+current_ui: "UI" = None
 
 bg_color = (0, 0, 0)
 fg_color = (128, 128, 128, 255)
@@ -31,9 +31,9 @@ class EmphasizePushButton(Button):
     def __init__(self, *args, **kwargs):
         Button.__init__(self, *args, **kwargs)
         self.font = preset.MiSans()
+        assert isinstance(current_ui, UI)
+        current_ui.callbacks.append(self.update)
         self.situation = 0
-        assert isinstance(current_UI, UI)
-        current_UI.callbacks.append(self.update)
 
     def on_mouse_enter(self, x, y):
         Button.on_mouse_enter(self, x, y)
@@ -62,23 +62,47 @@ class UI(glooey.Gui):
         glooey.Gui.__init__(self, pyglet.window.Window(w, h, None, True))
         self.callbacks = deque()
 
+    @classmethod
+    def setup(cls, *size):
+        global current_ui
+        return (
+            current_ui := cls(*after_scale(*size if size else cls.custom_size_hint))
+        )
+
     def on_draw(self):
         for function in self.callbacks:
             function()
         glooey.Gui.on_draw(self)
 
+    def add(self, widget):
+        glooey.Gui.add(self, widget)
+        return widget
 
-def setup(w, h):
-    global current_UI
-    current_UI = UI(*after_scale(w, h))
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pyglet.app.run()
+
+
+class HBox(glooey.HBox):
+    def add(self, widget, size=None):
+        glooey.HBox.add(self, widget, size)
+        return self
+
+
+class VBox(glooey.VBox):
+    def add(self, widget, size=None):
+        glooey.HBox.add(self, widget, size)
+        return self
 
 
 if __name__ == '__main__':
-    setup(1920, 1080)
-    current_UI.add(get_bgd(bg_color)())
-    current_UI.add(box := glooey.VBox())
-
-    box.add(s := EmphasizePushButton("适用大字号の按钮"))
-    box.add(SimplePushButton("适用稍小字号の按钮"))
-
-    pyglet.app.run()
+    # test
+    with UI.setup(888, 555) as ui:
+        ui.add(get_bgd(bg_color)())
+        (
+            ui.add(VBox())
+            .add(EmphasizePushButton("适用大字号の按钮"))
+            .add(SimplePushButton("适用稍小字号の按钮"))
+        )
