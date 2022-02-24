@@ -58,16 +58,12 @@ class EmphasizePushButton(Button):
 
 
 class UI(glooey.Gui):
-    def __init__(self, w, h):
+    def __init__(self, *size):
+        w, h = after_scale(*after_scale(*size if size else self.custom_size_hint))
         glooey.Gui.__init__(self, pyglet.window.Window(w, h, None, True))
         self.callbacks = deque()
-
-    @classmethod
-    def setup(cls, *size):
         global current_ui
-        return (
-            current_ui := cls(*after_scale(*size if size else cls.custom_size_hint))
-        )
+        current_ui = self
 
     def on_draw(self):
         for function in self.callbacks:
@@ -99,7 +95,7 @@ class VBox(glooey.VBox):
 
 if __name__ == '__main__':
     # test
-    with UI.setup(888, 555) as ui:
+    with UI(888, 555) as ui:
         ui.add(get_bgd(bg_color)())
         (
             ui.add(VBox())

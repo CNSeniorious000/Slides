@@ -30,5 +30,5 @@ class MainForm(UI):
 
 
 if __name__ == '__main__':
-    with MainForm.setup() as ui:
+    with MainForm() as ui:
         ui.build()
