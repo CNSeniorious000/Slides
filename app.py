@@ -17,9 +17,9 @@ class MainForm(UI):
     custom_size_hint = 1280, 720
 
     def build(self):
-        self.add(get_bgd(bg_color)())
         (
-            self.add(VBox())
+            self.add(get_bgd(bg_color)())
+            .add_widget(VBox())
             .add(top_box := MenuBar())
             .add(middle_grid := glooey.Grid())
             .add(bottom_box := HBox())

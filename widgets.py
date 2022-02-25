@@ -72,6 +72,10 @@ class UI(glooey.Gui):
 
     def add(self, widget):
         glooey.Gui.add(self, widget)
+        return self
+
+    def add_widget(self, widget):
+        self.add(widget)
         return widget
 
     def __enter__(self):
@@ -95,10 +99,9 @@ class VBox(glooey.VBox):
 
 if __name__ == '__main__':
     # test
-    with UI(888, 555) as ui:
+    with UI(888, 555) as ui: (
         ui.add(get_bgd(bg_color)())
-        (
-            ui.add(VBox())
-            .add(EmphasizePushButton("适用大字号の按钮"))
-            .add(SimplePushButton("适用稍小字号の按钮"))
-        )
+        .add_widget(VBox())
+        .add(EmphasizePushButton("适用大字号の按钮"))
+        .add(SimplePushButton("适用稍小字号の按钮"))
+    )
