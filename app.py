@@ -4,7 +4,7 @@ from widgets import *
 class MenuBar(HBox):
     def __init__(self):
         glooey.HBox.__init__(self)
-        l_btn = EmphasizePushButton("左左左左左左左左左左左")
+        l_btn = EmphasizePushButton("←")
         r_btn = SimplePushButton("右右右右右右右右右右")
         l_btn.set_alignment("left")
         r_btn.set_alignment("right")

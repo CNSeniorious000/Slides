@@ -10,23 +10,18 @@ text_color = (255, 255, 255, 255)
 
 
 class SimplePushButton(Button):
-    Base, Over, Down = get_bgd_triplet(128)
-
     class Foreground(glooey.Label):
-        custom_font_name = "HarmonyOS Sans SC Light"
+        custom_font_name = "HarmonyOS Sans SC"
         custom_font_size = after_scale(16)
         custom_color = text_color
         custom_alignment = "center"
-
-
-class EmphasizePushButton(Button):
+        
     Base, Over, Down = get_bgd_triplet(128)
 
-    class Foreground(glooey.Label):
+
+class EmphasizePushButton(SimplePushButton):
+    class Foreground(SimplePushButton.Foreground):
         custom_font_name = "MiSans Light"
-        custom_font_size = after_scale(16)
-        custom_color = text_color
-        custom_alignment = "center"
 
     def __init__(self, *args, **kwargs):
         Button.__init__(self, *args, **kwargs)
@@ -53,7 +48,7 @@ class EmphasizePushButton(Button):
 
     def update(self):
         if self.situation and (to := self.next_font):
-            # print(f"{to = }")
+            self.fit()
             self.get_foreground().set_font_name(to)
 
 
@@ -101,7 +96,7 @@ if __name__ == '__main__':
     # test
     with UI(888, 555) as ui: (
         ui.add(get_bgd(bg_color)())
-        .add_widget(VBox())
-        .add(EmphasizePushButton("适用大字号の按钮"))
-        .add(SimplePushButton("适用稍小字号の按钮"))
+            .add_widget(VBox())
+            .add(EmphasizePushButton("适用大字号の按钮"))
+            .add(SimplePushButton("适用稍小字号の按钮"))
     )

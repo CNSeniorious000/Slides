@@ -27,9 +27,9 @@ def get_block(size, *color):
             case (l, a):
                 arr = np.full((size, size, 4), (l, l, l, a))
             case (r, g, b):
-                arr = np.full((size, size, 3), (r, g, b))
+                arr = np.full((size, size, 3), (b, g, r))
             case (r, g, b, a):
-                arr = np.full((size, size, 4), (r, g, b, a))
+                arr = np.full((size, size, 4), (b, g, r, a))
             case _:
                 raise TypeError(*color)
         cv2.imwrite(f"{assets_dir}/{file_name}", arr)
@@ -83,11 +83,20 @@ class VariableFont:
 
 
 class Button(glooey.Button):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, w=None, h=None, space=1.25, **kwargs):
         glooey.Button.__init__(self, *args, **kwargs)
+        self.w = w
+        self.h = h
+        self.space = space
         self.fit()
 
     def fit(self):
-        w, h = self.get_foreground().do_claim()
-        margin = round(h * 1.25)
-        self.set_size_hint(w + margin, h + margin)
+        w, h = self.w, self.h
+        if w and h:
+            return self.set_size_hint(w, h)
+        w_hint, h_hint = self.get_foreground().do_claim()
+        margin = round(h_hint * self.space)
+        return self.set_size_hint(
+            w if w else w_hint + margin,
+            h if h else h_hint + margin,
+        )
