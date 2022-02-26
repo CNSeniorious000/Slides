@@ -10,8 +10,10 @@ __all__ = [
     "VariableFont",
     "Button",
 ]
-
-pyglet.resource.path.append(cache_dir := rf"{__path__[0]}\cache")
+try:
+    pyglet.resource.path.append(cache_dir := rf"{__path__[0]}\cache")
+except NameError:
+    pyglet.resource.path.append(cache_dir := "cache")  # in case debug from within package
 ctypes.windll.user32.SetProcessDPIAware(2)
 factor = ctypes.windll.shcore.GetScaleFactorForDevice(0)
 
@@ -30,16 +32,11 @@ def get_block(size, *color):
     except pyglet.resource.ResourceNotFoundException:
         import numpy as np, cv2
         match color:
-            case (k, ):
-                arr = np.full((size, size), k)
-            case (l, a):
-                arr = np.full((size, size, 4), (l, l, l, a))
-            case (r, g, b):
-                arr = np.full((size, size, 3), (b, g, r))
-            case (r, g, b, a):
-                arr = np.full((size, size, 4), (b, g, r, a))
-            case _:
-                raise TypeError(*color)
+            case (k, ): arr = np.full((size, size), k)
+            case (l, a): arr = np.full((size, size, 4), (l, l, l, a))
+            case (r, g, b): arr = np.full((size, size, 3), (b, g, r))
+            case (r, g, b, a): arr = np.full((size, size, 4), (b, g, r, a))
+            case _: raise TypeError(*color)
         print(f"{cache_dir}\\{file_name}")
         cv2.imwrite(f"{cache_dir}\\{file_name}", arr)
         pyglet.resource.reindex()

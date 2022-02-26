@@ -27,10 +27,6 @@ class UI(glooey.Gui):
         glooey.Gui.add(self, widget)
         return self
 
-    def add_widget(self, widget):
-        self.add(widget)
-        return widget
-
     def __enter__(self):
         return self
 
@@ -91,4 +87,3 @@ class VBox(glooey.VBox):
     def add(self, widget, size=None):
         glooey.HBox.add(self, widget, size)
         return self
-
