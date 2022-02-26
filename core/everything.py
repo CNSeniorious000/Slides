@@ -55,17 +55,16 @@ class EmphasizePushButton(SimplePushButton):
         current_ui.callbacks.append(self.update)
         self.situation = 0
 
-    def on_mouse_enter(self, x, y):
-        Button.on_mouse_enter(self, x, y)
-        self.situation = 1
+        @self.event("on_mouse_hold")
+        @self.event("on_mouse_enter")
+        @self.event("on_mouse_motion")
+        def on_enter(*_):
+            self.situation = 1
 
-    def on_mouse_leave(self, x, y):
-        Button.on_mouse_leave(self, x, y)
-        self.situation = -1
-
-    def on_mouse_drag_leave(self, x, y):
-        Button.on_mouse_drag_leave(self, x, y)
-        self.situation = -1
+        @self.event("on_mouse_leave")
+        @self.event("on_mouse_drag_leave")
+        def on_leave(*_):
+            self.situation = -1
 
     @property
     def next_font(self):
