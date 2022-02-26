@@ -3,9 +3,10 @@
     <option name="myName" value="Project Default" />
     <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <Languages>
-        <language minSize="880" name="Python" />
+        <language minSize="1947" name="Python" />
       </Languages>
     </inspection_tool>
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
@@ -24,6 +25,10 @@
           <option value="E228" />
           <option value="E301" />
           <option value="E402" />
+          <option value="E501" />
+          <option value="E722" />
+          <option value="E115" />
+          <option value="E122" />
         </list>
       </option>
     </inspection_tool>
@@ -37,7 +42,15 @@
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="print" />
+        </list>
+      </option>
+    </inspection_tool>
     <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredIdentifiers">
         <list>
@@ -45,6 +58,11 @@
           <option value="pygame.sprite.Sprite.vx" />
           <option value="pygame.sprite.Sprite.*" />
           <option value="str.__bool__" />
+          <option value="av.VideoFrame" />
+          <option value="info_display.wrapped_func.*" />
+          <option value="int.astype" />
+          <option value="PySide6.QtWidgets.clicked.connect" />
+          <option value="PySide6.QtQml.quit.connect" />
         </list>
       </option>
     </inspection_tool>
