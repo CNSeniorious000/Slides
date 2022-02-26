@@ -19,10 +19,12 @@ class MainForm(UI):
     def build(self):
         (
             self.add(get_bgd(preset.bg_color)())
-                .add_widget(VBox())
+                .add(
+                VBox()
                 .add(top_box := MenuBar())
                 .add(middle_grid := glooey.Grid())
                 .add(bottom_box := HBox())
+            )
         )
 
         bottom_box.add(glooey.Placeholder(color="green"))
