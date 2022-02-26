@@ -72,8 +72,8 @@ class EmphasizePushButton(SimplePushButton):
 
     def update(self):
         if self.situation and (to := self.next_font):
-            self.fit()
             self.get_foreground().set_font_name(to)
+            self.fit()
 
 
 class HBox(glooey.HBox):

@@ -3,12 +3,12 @@ import core
 
 
 def test_path():
-    with UI(444, 222) as ui:
+    with UI(777, 333) as ui:
         (
             ui.add(get_bgd(preset.bg_color)())
             .add(
                 VBox()
-                .add(EmphasizePushButton("适用大字号の按钮"))
+                .add(EmphasizePushButton("12345678901234567890"))
                 .add(SimplePushButton(core.cache_dir))
             )
         )
