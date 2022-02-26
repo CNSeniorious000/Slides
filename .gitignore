@@ -1,2 +1,4 @@
-/older/milestones/
-/.idea/
+/.idea
+/core/cache/*
+*.pyc
+/tests/.pytest_cache
