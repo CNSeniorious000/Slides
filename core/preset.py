@@ -37,5 +37,5 @@ class HarmonyOSSans(VariableFont):
 
 
 bg_color = (0, 0, 0)
-fg_color = (128, 128, 128, 255)
-text_color = (255, 255, 255, 255)
+fg_color = (128, 128, 128)
+text_color = (255, 255, 255)

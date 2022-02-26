@@ -44,6 +44,7 @@ def get_block(size, *color):
 
 
 def get_bgd(inner, outer=None, *, size=2):
+    # TODO: to support non-2-power border value
     class _(glooey.Background):
         custom_center = get_block(size, *inner)
         if outer is not None:
