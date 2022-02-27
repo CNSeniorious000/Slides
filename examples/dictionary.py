@@ -30,7 +30,6 @@ class MainForm(UI):
     custom_size_hint = 640, 320
 
     def build(self):
-        self.add(get_bgd(preset.used().bgd_color)())
         console = Console(alignment=alignment)
         console.push_handlers(on_unfocus=lambda w: print(f"{w.text = }"))
         self.add(console)

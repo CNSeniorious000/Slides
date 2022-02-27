@@ -108,7 +108,7 @@ class BoldButton(AniButton):
 
 
 class BaseLabel(glooey.EditableLabel):
-    custom_kerning = 2
+    custom_kerning = 0.5
 
     def __init__(self, text="", line_wrap=None):
         glooey.EditableLabel.__init__(self, text, line_wrap)
