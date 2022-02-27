@@ -1,7 +1,5 @@
-from core.everything import (
-    EmphasizePushButton, SimplePushButton, UI,
-    glooey, after_scale, get_bgd, preset, get_bgd_triplet
-)
+from core.everything import *
+import pyglet, glooey
 
 
 def alignment(widget_rect: glooey.Rect, max_rect: glooey.Rect):
@@ -16,21 +14,20 @@ class Console(glooey.Form):
     class Label(glooey.EditableLabel):
         custom_text_alignment = "center"
         custom_font_name = "Unifont CSUR"
-        custom_font_size = after_scale(40)
-        custom_top_padding = custom_horz_padding = after_scale(32)
-        custom_height_hint = after_scale(96)
+        # after_scale = lambda i:i
+        custom_font_size = after_scale(24)
+        custom_top_padding = custom_horz_padding = after_scale(16)
+        custom_height_hint = after_scale(48)
+
         custom_color = preset.text_color
+        custom_selection_color = preset.bg_color
+        custom_selection_background_color = preset.text_color
 
     Base = get_bgd((128, 20))
     Focused = get_bgd((128, 30), (128, 150), size=1)
 
     def __init__(self, text="", alignment=None):
         glooey.Form.__init__(self, text)
-
-        # w_hint, h_hint = self.get_label().do_claim()
-        # margin = h_hint * 4
-        # self.set_size_hint(w_hint + margin, h_hint + margin)
-
         self.set_alignment(alignment if alignment else self.custom_alignment)
 
 
@@ -39,7 +36,6 @@ class MainForm(UI):
 
     def build(self):
         self.add(get_bgd(preset.bg_color)())
-
         console = Console(alignment=alignment)
         console.push_handlers(on_unfocus=lambda w: print(f"{w.text = }"))
         self.add(console)
