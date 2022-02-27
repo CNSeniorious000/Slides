@@ -63,9 +63,9 @@ def get_bgd(inner, outer=None, *, size=2):
 
 def get_bgd_triplet(*color, bordered=True):
     return (
-        get_bgd((*color, 20)),
-        get_bgd((*color, 20), (*color, 60) if bordered else None),
-        get_bgd((*color, 60), (*color, 180) if bordered else None),
+        get_bgd((*color, 20)[:3]),
+        get_bgd((*color, 20)[:3], (*color, 60)[:3] if bordered else None),
+        get_bgd((*color, 60)[:3], (*color, 180)[:3] if bordered else None),
     )
 
 

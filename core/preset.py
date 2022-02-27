@@ -1,7 +1,10 @@
 try:
     from . import VariableFont
-except ImportError:
+    from .theme import *
+except ImportError as ex:
+    print(ex)
     from __init__ import VariableFont
+    from theme import *
 
 
 class MiSans(VariableFont):
@@ -36,11 +39,9 @@ class HarmonyOSSans(VariableFont):
         )
 
 
-# dark
-# bg_color = (0, 0, 0)
-# fg_color = (128, 128, 128)
-# text_color = (255, 255, 255)
-
-# white
-bg_color = (255,255,255)
-fg_color = ()
+class Vue(DefaultLight):
+    text_color = 53, 73, 94
+    down_color = 53, 73, 94, 20
+    bgd_color = 246, 246, 246
+    base_color = over_color = text_highlight_color = 255, 255, 255, 255
+    over_border_color = down_border_color = text_highlight_bgd_color = 66, 185, 131, 255

@@ -1,5 +1,4 @@
 from core.everything import *
-import pyglet, glooey
 
 
 def alignment(widget_rect: glooey.Rect, max_rect: glooey.Rect):
@@ -11,20 +10,16 @@ class Console(glooey.Form):
     custom_alignment = "fill horz"
     custom_horz_padding = after_scale(60)
 
-    class Label(glooey.EditableLabel):
-        custom_text_alignment = "center"
-        custom_font_name = "Unifont CSUR"
+    class Label(BaseLabel):
+        # custom_text_alignment = "center"
+        custom_font_name = "HP Simplified"
         # after_scale = lambda i:i
         custom_font_size = after_scale(24)
-        custom_top_padding = custom_horz_padding = after_scale(16)
+        custom_top_padding = custom_horz_padding = after_scale(12)
         custom_height_hint = after_scale(48)
 
-        custom_color = preset.text_color
-        custom_selection_color = preset.bg_color
-        custom_selection_background_color = preset.text_color
-
-    Base = get_bgd((128, 20))
-    Focused = get_bgd((128, 30), (128, 150), size=1)
+    Base = get_bgd(preset.Vue.base_color)
+    Focused = get_bgd(preset.Vue.over_color, preset.Vue.over_border_color, size=4)
 
     def __init__(self, text="", alignment=None):
         glooey.Form.__init__(self, text)
@@ -35,12 +30,12 @@ class MainForm(UI):
     custom_size_hint = 640, 320
 
     def build(self):
-        self.add(get_bgd(preset.bg_color)())
+        self.add(get_bgd(preset.used().bgd_color)())
         console = Console(alignment=alignment)
         console.push_handlers(on_unfocus=lambda w: print(f"{w.text = }"))
         self.add(console)
 
 
 if __name__ == '__main__':
-    with MainForm() as ui:
+    with preset.Vue.using(), MainForm() as ui:
         ui.build()
