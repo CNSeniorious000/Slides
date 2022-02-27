@@ -117,11 +117,6 @@ class BaseLabel(glooey.EditableLabel):
 
     def stylize(self):
         theme = self.theme
-        # self.set_color(theme.text_color)
-        # self.set_selection_color(theme.text_highlight_color)
-        # self.set_selection_background_color(theme.text_highlight_bgd_color)
-
-        self.set_background_color(theme.text_highlight_bgd_color)
-        self.set_color(theme.text_highlight_color)
-        self.set_selection_background_color(theme.text_color)
+        self.set_color(theme.text_color)
         self.set_selection_color(theme.text_highlight_color)
+        self.set_selection_background_color(theme.text_highlight_bgd_color)

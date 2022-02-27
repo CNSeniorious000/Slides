@@ -1,6 +1,5 @@
 import sys
 
-sys.path.insert(0, "your path here")
 sys.path.append("..")
 from core.everything import *
 
@@ -33,8 +32,7 @@ def resize():
         label.set_width_hint(width)
 
 
-textbox = Completion()
-textbox.push_handlers(on_unfocus=lambda w: print(f"{w.text = }"))
+textbox = Completion("type here")
 ui.callbacks.append(resize)
 ui.add(textbox)
 pyglet.app.run()
