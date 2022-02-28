@@ -12,8 +12,8 @@ current_ui: "UI" = None
 
 class UI(glooey.Gui):
     def __init__(self, *size):
-        w, h = after_scale(*size if size else self.custom_size_hint)
-        glooey.Gui.__init__(self, pyglet.window.Window(w, h, None, True))
+        w, h = after_scale(*size or self.custom_size_hint)
+        glooey.Gui.__init__(self, pyglet.window.Window(w or None, h or None, None, True))
         self.callbacks = deque()
         global current_ui
         current_ui = self

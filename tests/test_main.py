@@ -1,3 +1,5 @@
+import os, sys
+sys.path.append(rf"{os.path.dirname(__file__)}\..")
 from core.everything import *
 import core
 
@@ -14,8 +16,8 @@ def test_main():
         (
             ui.add(
                 VBox()
-                .add(BoldButton("壹贰叁肆伍陆柒捌玖拾"))
-                .add(BaseButton(core.cache_dir))
+                    .add(BoldButton("壹贰叁肆伍陆柒捌玖拾"))
+                    .add(BaseButton(core.cache_dir))
             )
         )
 
