@@ -95,15 +95,12 @@ class Button(glooey.Button):
         self.w = w
         self.h = h
         self.space = space
-        self.fit()
+        self.set_size_hint(w, h) if w and h else self.fit()
 
     def fit(self):
         w, h = self.w, self.h
         if w and h:
-            return self.set_size_hint(w, h)
+            return print("skipped")
         w_hint, h_hint = self.get_foreground().do_claim()
         margin = round(h_hint * self.space)
-        return self.set_size_hint(
-            w if w else w_hint + margin,
-            h if h else h_hint + margin,
-        )
+        return self.set_size_hint(w or w_hint + margin, h or h_hint + margin)

@@ -91,11 +91,15 @@ class BoldButton(AniButton):
     class Foreground(BaseButton.Foreground):
         custom_font_name = "MiSans Light"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, auto=None, **kwargs):
         self.font = preset.MiSans()
         AniButton.__init__(self, *args, **kwargs)
         current_ui.callbacks.append(self.update)
         self.situation = 0
+        if auto and not self.w:
+            w_hint = self.get_foreground().do_claim()[0]
+            self.w = w_hint * 1.5
+            self.fit()
 
     @property
     def next_font(self):
@@ -108,8 +112,6 @@ class BoldButton(AniButton):
 
 
 class BaseLabel(glooey.EditableLabel):
-    custom_kerning = 0.5
-
     def __init__(self, text="", line_wrap=None):
         glooey.EditableLabel.__init__(self, text, line_wrap)
         self.theme = preset.used()
