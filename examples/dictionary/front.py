@@ -1,9 +1,12 @@
-import os, sys; sys.path.append(rf"{os.path.dirname(__file__)}\..\..")
-from core.everything import *
-from pyperclip import copy
 from contextlib import suppress
-from thefuzz import process
+from threading import Thread
 from functools import cache
+from thefuzz import process
+from pyperclip import copy
+from time import sleep
+import os, sys
+sys.path.append(rf"{os.path.dirname(__file__)}\..\..")
+from core.everything import *
 
 n_results = 10
 with suppress(ValueError):
@@ -11,10 +14,10 @@ with suppress(ValueError):
 
 glossary = open("glossary.txt", "rb").read().decode().split("\r\n")
 search = cache(lambda text: process.extractBests(text, glossary, limit=n_results))
-# after_scale = lambda _:_
+after_scale = lambda *args: args[0] if len(args) == 1 else args
 
 
-class Console(glooey.Form):
+class VueForm(glooey.Form):
     custom_alignment = "fill horz"
 
     class Label(BaseLabel):
@@ -38,35 +41,47 @@ class Button(BoldButton):
 
 
 class MainForm(UI):
-    custom_size_hint = 80, 1000
+    custom_size_hint = after_scale(600, 48 * n_results)
 
-    def __init__(self, *size):
-        UI.__init__(self, *size)
-        vbox = VBox().add(console := Console())
+    def __init__(self):
+        UI.__init__(self)
+        vbox = VBox().add(text_field := VueForm())
+        self.add(vbox)
         vbox.padding = after_scale(12)
         vbox.aliment = "fill horz"
-        [vbox.add(Button(" ", after_scale(300), auto=True, space=0.5)) for _ in range(n_results)]
+        [vbox.add(Button(" "*30, space=0.5)) for _ in range(n_results)]
         buttons = vbox.get_children()[1:]
         callback = lambda widget: copy(widget.foreground.text)
         [button.push_handlers(on_click=callback) for button in buttons]
-        last = " "
+        last = ""
 
         def update():
             nonlocal last
-            if last != (this := console.get_text()):
+            if last != (this := text_field.get_text()):
                 last = this
+                print(this)
+                for i, result in enumerate(search(this)):
+                    match, score = result
+                    try:
+                        buttons[i].get_foreground().set_text(f"{match} @ {score}")
+                    except Exception as e:
+                        print(e.args)
+            sleep(1/30)
 
-        try:
-            self.add(vbox)
-        except RuntimeError as ex:
-            with suppress(ValueError):
-                key = "but its children are "
-                message = ex.args[0]
-                print(message)
-                left = message.index(key) + len(key)
-                w, h = message[left:-1].split("x")
-                print(f"{w = }, {h = }")
-                exit(1)
+        self.callbacks.append(update)
+
+        #
+        # try:
+        #     self.add(vbox)
+        # except RuntimeError as ex:
+        #     with suppress(ValueError):
+        #         key = "but its children are "
+        #         message = ex.args[0]
+        #         print(message)
+        #         left = message.index(key) + len(key)
+        #         w, h = message[left:-1].split("x")
+        #         print(f"{w = }, {h = }")
+        #         exit(1)
 
 
 if __name__ == '__main__':
