@@ -1,6 +1,6 @@
 import os, sys
 
-sys.path.append(rf"{os.path.dirname(__file__)}\..")
+sys.path.append(rf"{os.path.dirname(__file__)}\..\..")
 from core.everything import *
 
 
