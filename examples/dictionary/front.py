@@ -13,7 +13,7 @@ with suppress(ValueError):
 
 glossary = open("glossary.txt", "rb").read().decode().split("\r\n")
 search = cache(lambda text: process.extractBests(text, glossary, limit=n_results))
-after_scale = lambda *args: args[0] if len(args) == 1 else args
+# after_scale = lambda *args: args[0] if len(args) == 1 else args
 
 
 class VueForm(glooey.Form):
@@ -48,7 +48,7 @@ class MainForm(UI):
         self.add(vbox)
         vbox.padding = after_scale(12)
         vbox.aliment = "fill horz"
-        [vbox.add(Button(" "*30, auto=True, space=0.5)) for _ in range(n_results)]
+        [vbox.add(Button(" " * 30, w=after_scale(800), space=0.8)) for _ in range(n_results)]
         buttons = vbox.get_children()[1:]
         callback = lambda widget: copy(widget.foreground.text)
         [button.push_handlers(on_click=callback) for button in buttons]
@@ -66,19 +66,6 @@ class MainForm(UI):
                         print(*e.args)
 
         self.callbacks.append(update)
-        # update()
-        #
-        # try:
-        #     self.add(vbox)
-        # except RuntimeError as ex:
-        #     with suppress(ValueError):
-        #         key = "but its children are "
-        #         message = ex.args[0]
-        #         print(message)
-        #         left = message.index(key) + len(key)
-        #         w, h = message[left:-1].split("x")
-        #         print(f"{w = }, {h = }")
-        #         exit(1)
 
 
 if __name__ == '__main__':

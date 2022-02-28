@@ -91,7 +91,7 @@ class BoldButton(AniButton):
     class Foreground(BaseButton.Foreground):
         custom_font_name = "MiSans Light"
 
-    def __init__(self, *args, auto=None, **kwargs):
+    def __init__(self, *args, auto=False, **kwargs):
         self.font = preset.MiSans()
         AniButton.__init__(self, *args, **kwargs)
         current_ui.callbacks.append(self.update)
