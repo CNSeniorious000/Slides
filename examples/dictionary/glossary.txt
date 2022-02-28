@@ -1,0 +1,724 @@
+Artificial人造的
+Contraction收缩
+Cochlea耳蜗
+Cortical皮质
+Electroencephalograph 脑电图
+Elevator pitch电梯游说，短的、职业性的自我介绍
+fMRI功能磁共振成像
+Implanted植入
+Infrared红外
+Peripheral nerve外周神经
+Phrenology颅相学
+Prosthetic假肢
+Retina视网膜
+Scalp 头皮
+Science fiction科幻
+Seizure 癫痫
+Stimulation 刺激
+Transcranial经颅
+Algorithm 算法
+Classification 分类
+Clustering聚类，将数据点分成类似的组
+Coefficients系数
+Criteria标准
+Cross-validation交叉验证。把数据分成多个部分，轮流用一部分作为验证数据，其他作为训练数据
+Derivative导数
+Dimension维数
+Feature特征, 原始数据的某函数、作为分类器的输入
+Fine-tuning 微调整
+Identity matrix 单位矩阵
+Independent variable独立变量
+Magnitude大小，量级
+Matrix矩阵
+Preprocessing预处理
+Principal components analysis主成分分析,一个经典降维算法
+Objective function目标函数, 所关心的目标与相关的因素的函数
+Optimal最优
+Over-fitting过拟合
+Parameters参数
+Regression回归
+Regularization 正规化,采用先验信息来改善分类器或回归模型的参数拟合
+Supervised learning监督学习，利用一组已知类别的样本调整分类器的参数
+Tradeoff权衡
+Action potential 动作电位
+Anterior前侧
+Arachnoid mater蛛网膜
+Axial/horizontal/transverse plane 从上看到的平面
+Axon轴突
+Axon terminal轴突终末
+Brain stem脑干
+Calcium钙
+Caudal尾端
+Cerebellum小脑
+Concentration浓度
+Conduction电导
+Contralateral 对侧
+Coronal plane从前看到的面
+Cortex皮质
+Depolarize去极化
+Dendrite树突
+Dorsal背侧
+Dura mater硬脑膜
+Frontal Lobe额叶
+Glia神经胶质细胞
+Glucose葡萄糖
+Gyrus脑回
+Inferior下侧
+Ion离子
+Ipsilateral同侧
+Homunculus矮人，人体和脑区的对应
+Lateral侧
+Limbic system边缘系统
+Magnetic Resonance Imaging磁共振成像
+Magnetoencephalography脑磁图
+Medial内侧
+Myelin髓鞘
+Near Infrared Spectroscopy近红外光谱成像
+Neurotransmitter 神经递质
+Occipital Lobe枕叶
+Optical imaging of intrinsic signals内源信号光学成像
+Optogenetics光遗传学
+Parietal lobe顶叶
+Pia mater软脑膜
+Phrenology颅相学
+Positron Emission Tomography正电子断层
+Posterior后侧
+Potassium钾
+Potential电位
+Refractory period 不应期
+Rostral吻端，喙
+Sagittal plane 从旁边看到的平面
+Sodium钠
+Somatosensory Cortex体感皮层
+Superior上侧
+Sulcus 槽
+Temporal lobe颞叶
+Transcranial electrical stimulation经颅电刺激
+Transcranial magnetic stimulation经颅磁刺激
+Ventral腹侧
+Vesicles 囊泡
+Voltage电压
+ADHD (Attention deficit hyperactivity disorder)多动症
+Anti-alias filtering抗混叠滤波，一种低通滤波器、通常在欠采样之前使用
+Anticipation预期
+Assistive辅助
+Binding结合
+Blur模糊
+Causation因果关系
+Clinical 临床
+Cognitive认知
+Consciousness意识
+Deficit不足
+Differential amplifier差分放大器，放大两个电压的差值
+Efficacy功效
+Encoding (memory) 记忆的编码，记忆的形成
+Event related potentials, evoked potential事件相关电位，跟随某刺激或行为的脑电规律
+Feedback反馈
+Foggy window雾蒙蒙的窗户
+Hypnagogia近睡眠状态
+Idle空闲
+Locked-in syndrome闭锁综合征
+Maintenance (memory) 记忆的维持
+Modulate调制
+Motivation动机
+Neurofeedback神经反馈，反馈神经信号来让用户调整心理状态或训练认知能力
+Oddball paradigm一种刺激模式，含有高概率刺激和低概率刺激（靶），靶刺激令人惊讶、造成某脑电规律（比如P300）
+Oscillating振荡的、摆动的
+Overlapping重叠
+Overload (mental) 心理、注意过载
+P300刺激三百毫秒后脑电信号里的正电位反应 [Oddball paradigm]
+Paralysis瘫痪
+Real-time实时的
+Preparation准备
+Proportional按比例的
+Prosthetics, prosthesis假肢
+Reference electrode参考电极
+Resolution分辨率
+Retrieval (memory) 记忆的检索
+Rhythm节奏
+Saline生理盐水
+Self-regulation自我调节
+Steady State Visually Evoked Potential稳态视觉诱发电位，对振荡视觉刺激的脑电反应
+Stimulation, stimulus刺激
+Synchronized, synchronization同步
+Vigilance（保持）警惕
+Artifact不来源于人脑的电信号
+Band-pass filter带通滤波器, 让某些频率（频率带）的信号通过过滤器
+Band-stop filter带阻滤波器，把某些频率（频率带）过滤掉
+Blanking把含噪音的数据设为0或者删除掉
+Classifier分类器
+Common Spatial Pattern共空间模式，找最优空间投影使两类信号最容易区分
+Convolution卷积，通过两个函数生成第三个函数的数学算子
+Correlation相关
+Covariance协方差
+Discrete Fourier transform离散傅里叶变换，实际使用傅里叶变换时通常用这个算法
+EMG (Electromyography) 肌电图，肌电信号，记录肌肉细胞放电
+EOG (Electrooculography) 眼肌电图，眼肌电信号，记录控制眼动的肌肉的放电
+Features特征, 原始数据的某函数、作为分类器的输入
+Finite Impulse Response Filter有限冲激响应滤波器
+Fourier transform傅里叶变换，把输入函数表示成三角函数的线性组合，用于频谱分析
+Frequency频率
+Frequency domain频率领域，按频率上的分布表达（对比：时间系列）
+Gradient descent梯度下降法，一种最优化算法。它求函数的梯度，然后向降低函数方向调整输入
+High-pass filter高通滤波，让某频率以上的信号通过过滤器
+Independent独立的
+Laplacian spatial filtering拉普拉斯空间滤波，用于提高空间分辨率
+Least mean squares filter最小均方误差过滤器，一种自适应（实时更新）、有限冲激响应滤波器
+Linear combination线性组合
+Linear discriminant线性判别
+Low-pass filter低通滤波器，让某频率以下的信号通过过滤器
+Normalization正常化，标准化
+Power line电源线，50-60 Hz 交流电
+Sinusoidal正弦波的
+Source localization源定位
+Spectral analysis频谱分析，把信号分解成不同频率成分，测量信号含有哪些频率和各频率的强度
+Stochastic随机性
+Tap过滤阀。在离散时间的系统里的一个（相对的）时间点
+Time domain时间领域，比如时间为x轴的曲线图（对比：频率领域）
+Absorption吸收
+Align对齐
+BOLD signal血氧信号,跟着神经活动变化。神经活动需要能源，身体会对激活的脑区提高供血量。
+Calcium imaging钙成像，用荧光染料标记神经细胞里的钙，测量细胞里的钙含量
+Capillaries毛细血管
+Causality因果关系
+Connectivity连接性
+Cross-validation交叉验证。把数据分成多个部分，轮流用一部分作为验证数据，其他作为训练数据
+Deoxygenated脱氧
+Detrending去趋势
+Fluorescent荧光
+Functional Magnetic resonance imaging功能磁共振，测量脑里的血氧变化
+Gradient coil梯度线圈,　选择MRI成像部位
+Hemodynamic血流的
+Hydrogen氢原子
+Independent Component Analysis独立成分分析,把混合的信号区分的一种方法
+Intrusive memories侵入性的记忆，通常因为心理创伤形成
+Jostle 推动
+Magnetic resonance imaging磁共振成像
+Magnetoencephalography脑磁图,测量脑里的磁场变化
+Near Infrared Spectroscopy近红外光谱成像，测量脑表面的血氧变化
+Non-invasive无创
+Normalization正常化
+Oxygenated含氧
+Proton质子
+Refracted折射
+Spatial resolution空间分辨率
+Superconducting magnet超导磁体,高分辨率的磁共振需要高强度的磁体
+Superposition叠加
+Slope坡
+SVM (Support vector machine) 支持向量机,一种常用的非线性分类器
+Temporal resolution时间分辨率
+Tissue生物组织
+Undershoot下冲，负脉冲信号
+Voxel体素, 三维成像数据的单元
+Wavelength波长
+Analog to digital conversion模数转换
+Amplifier放大器
+Amplifier noise来自放大器的噪声
+Capillary毛细管
+Carbon nanotubes碳纳米管
+Compliant柔软
+Connector 接口
+Degrade降解
+Dental acrylic 牙科丙烯酸
+Digital conversion数字化
+Dimple向下推，不穿透
+Electro-chemical reaction电化学反应
+Extracellular recording胞外记录,测量神经元附近对远处的电压
+Fiber optics光纤维
+Front end二步放大器
+Geometry几何形状,形状、大小、相对位置
+Head stage初步放大器,安在头上
+High-pass filter高通滤波器，滤掉过低的频率
+Immune response免疫反应
+Impedance阻抗，对电信号的阻力
+Insulation绝缘
+Intracellular recording胞内记录,测量神经元内对神经元外的电压，
+Laser激光
+Localized局部化的，位置上有特定性的
+Mechanical noise机械噪音,电线弯曲造成的噪声，
+Micropipette微吸管
+Microwire微电极，微细线
+Nanowire纳米电极, 纳米线
+Optogenetics光遗传学,用光来刺激转基因的神经元
+Platinum白金
+Platinum black铂黑，增加表面积
+Scar tissue疤痕组织
+Sham假的
+Specificity特异性
+Stainless steel不锈钢
+Stereotax立体定位框架
+Stereotrode双电极，分离小，记录相同的神经元
+Stiff僵硬
+Stroke中风
+Tether系绳,连线
+Tetrode四条电极，分离小，记录相同的神经元
+Thermal noise热噪声，由导体中电子的热震动引起的
+Titanium钛
+Trauma创伤
+Ventilation人工呼吸
+Waveform动作电位波形
+Aliasing混叠效应,用低频率采样含高频率信号时出现的问题
+Amplification放大
+Digitize数字化
+Distortion变形，畸变
+Head stage初步放大器,安在头上
+Impedance阻抗，对电信号的阻力
+Insulation绝缘
+Faraday cage法拉第笼，由金属或良导体形成的笼子
+FPGA (field programmable gate array) 现场可编程门阵列, 一种现代的专用集成电路
+Ground loop地环路，地线电压导致了地环路电流
+Mesh网格
+Optical isolation光电隔离，以光为媒介传输信号，隔离输入、输出的电信号
+Power line电源线
+Shielded room屏蔽室，房间是个法拉第笼
+Synchronization数据同步
+Trigger触发机制
+Adaptive自适的
+Alignment对齐
+Artifact伪迹
+Branch instruction分支指令, 程序的运行流程按条件决定, 简单硬件不支持
+Detection检测
+Ground truth真实数据, 黄金标准
+Histogram直方图
+Hoop箍
+Implementation实现方法
+Initialization初始化
+K-means  K-均值聚类算法，一个简单聚类算法
+Morphology形态
+Overlap重叠
+Principal components analysis主成份分析，一个经典降维算法
+Template模板
+Voltage trace电压对时间的曲线
+Waveform波形
+Acoustic waveform声波形
+Attention注意力
+Auditory cortex听觉皮层	
+Contribution贡献
+Correlation相关
+Decoding解码，把脑信号转换成原信息
+Directional Tuning动作方向与放电率的关系
+Distribution分布
+Encoding编码，脑信号怎么代表信息
+Grandmother cell对某一个人的(比如祖母)反应的神经元 （一个理论概念）
+Grid cell网格细胞，感受野像网络型
+LGN外侧膝状体
+Mind reading读心术
+Orientation tuning视觉刺激方向与放电率的关系
+Place field / place cell位置感受野，位置细胞
+Prediction预测
+Population vector群矢量算法，合计各神经元的preferred direction乘以放电率
+Preferred direction放电率最高的动作方向
+Receptive field感受野
+Reconstruction重构
+Spectrogram谱图
+Tuning某变量与放电率的关系
+Autoregressive moving average自回归滑动平均，一种时间序列模型
+Bayesian贝叶斯
+Bayes rule贝叶斯法则, 后验概率和先验概率乘于似然成正比
+Binning划分,分箱。按照时间段来数动作电位数量
+Cartesian coordinates笛卡尔坐标
+Classification分类
+Closed-form闭合形式
+Degrees of freedom空间自由度，控制维度
+Discrete离散
+Dynamics力量和扭矩
+Echolocation回声定位
+Finite impulse response filter有限脉冲响应滤波器，一种简单的滤波器
+Generative model生成模型, 输出是放电率或其它脑活动指标
+Independence独立性
+Integer整数
+Invertible可逆
+Kalman filter卡尔曼滤波, 一种概率推理算法，用于分析时间序列数据，跟踪潜伏的变量
+Kinematics位置、速度、加减速等变量
+Least squares最小二乘法
+Linear filter线性滤波器，滤波器的输出是原数据在不同延迟乘系数的和
+Lookup table查找表
+Naïve Bayes假设独立随机变量的贝叶斯分类器
+Non-parametric function非参数函数, 通常用查找表来求输出
+Normal distribution正态分布
+Normalize归一化
+Observation观察
+Observation model观测模型, 描述观测和状态的关系的概率模型
+Optimal最佳
+Over-determined超定（方程组）
+Parameter参数
+Poisson distribution泊松分布, 当一个随机事件以固定的平均瞬时速率随机且独立地出现时，这个事件在单位时间内出现的次数或个数就近似地服从泊松分布
+Posterior probability后验概率
+Probabilistic inference概率推理
+Prior probability先验概率
+Real-valued实数值
+Regression 回归
+Regularization正则化，采用先验信息来改善分类器或回归模型的参数拟合
+Ridge regression岭回归，一种正则化的线性回归
+Smoothing平滑
+Square root transform开平方转换, 固定泊松分布变量的方差
+State状态
+Stateful 有状态的
+Tap在离散时间的系统里的一个（相对的）时间点
+Tracking跟踪
+Transition model转换模型, 描述状态跟着时间的变化
+Trustworthy可信
+Uncertainty不确定度
+Variance方差
+Wiener Cascade维纳级联滤波器, 维纳滤波后通过非线性函数
+Autoregressive moving average自回归滑动平均，一种时间序列模型
+Bayesian贝叶斯
+Binning划分,分箱。按照时间段来数动作电位数量
+Cartesian coordinates笛卡尔坐标
+Classification分类
+Closed-form闭合形式
+Independence独立性
+Kalman filter卡尔曼滤波, 一种概率推理算法，用于分析时间序列数据，跟踪潜伏的变量
+KARMA核函数自回归滑动平均, 非线性的自回归滑动平均
+Kernel核函数, 描述数据点之间的相似
+Monte Carlo蒙特·卡罗, 随机模拟方法
+Non-parametric 非参数(的方法), 用查找表或训练数据直接计算的方法
+Observation观察
+Observation model观测模型, 描述观测和状态的关系的概率模型
+Optimal最佳
+Parameter参数
+Particle filter粒子滤波器, 用随机样本来表示状态分布的贝叶斯滤波器
+Point process点过程, 随机点分布的随机过程,动作电位发放时刻作为随机点
+Posterior probability后验概率
+Probabilistic inference概率推理
+Prior probability先验概率
+Simulation模拟计算
+Sigma point无损变换模拟计算的模拟点
+State状态
+Transition model转换模型, 描述状态跟着时间的变化
+Uncertainty不确定度
+Unscented Kalman filter无损卡尔曼滤波, 通过无损变换使非线性系统方程适用于线性假设下的标准Kalman滤波体系
+Unscented transform无损变换, 用模拟点来算一个分布通过非线性函数后的均值和方差
+Variance方差
+Angular acceleration角加速度
+Automatic relevance determination自动有关判断，用来描述可自动选特征的回归和分类方法
+Betz cells贝兹细胞,运动皮层里的巨大锥体神经元, 直接控制脊髓的运动神经元
+Conflicting冲突的
+Cortical-bulbar运动皮层到延髓的神经, 负责头部、眼睛、脸和嘴巴的运动
+Cortical-recticular运动皮层到网状结构的神经， 负责肌张力、体位和反应灵敏度
+Cortical-rubar运动皮层到红核的神经，负责肌张力、体位和反应灵敏度
+Cortical-spinal tract运动皮层到脊髓的神经，负责自主运动
+Data fusion数据融合
+Decussate交叉
+Dynamics力量和扭矩
+Elasticity弹性
+Extensor muscle伸展肌
+Fatigue疲劳
+Flexor muscle屈肌
+Grasping抓握运动
+Homunculus矮人，人体和脑区的对应
+Idle空闲
+Interneuron中间神经元
+Kinematics位置、速度、加减速等变量
+Latent潜伏的
+Learnability易学性
+Load载量
+Motoneuron运动神经元, 传脊髓发出的信息到肌肉
+Motor nuclei运动细胞核
+Phasic-tonic用来描述主要为在肌肉收缩开始放电的神经元，长期肌肉收缩时放电率较低
+Posture体位
+Proprioception本体觉
+Reaching伸手
+Sensitivity灵敏度
+Synergies肌肉或神经元发放协同模式
+Tonic用来描述肌肉收缩时一直放电的神经元
+Torque扭矩
+Uncertainty不确定性
+Unintended意外
+Usability可用性
+Bayes rule贝叶斯法则, 后验概率和先验概率乘于似然成正比
+Calibration校准
+Clinical use临床应用
+Co-adaptation双方同时互相适应
+Concatenate连结(衔接)起来
+Dual filtering用两个线性滤波器来解决状态与参数的同时跟踪
+Exponentially weighted moving average指数加权移动平均，以指數式遞減加權的移動平均
+Half-life半衰期
+Identifiability变量或参数可独特地求到
+Implicitly含蓄的
+Infinite impulse response无限脉冲响应，对单位冲激的输入信号的响应为无限长序列
+Joint filtering用一个非线性、状态含有模型参数的滤波器来解决状态与参数的同时跟踪
+Linear combination线性组合
+Periodic周期的
+Plasticity可塑性
+Prior information先验知识
+Probabilistic inference概率推理
+Protocol方案
+Rao-Blackwellization经过随机模拟方法提高非随机滤波器的能力。比如合并粒子滤波器和卡尔曼滤波器，用粒子代表非高斯的状态分布的成分，用卡尔曼滤波解决高斯成分的推理。每个粒子是个卡尔曼滤波器
+Rauch-Tung-Striebel smoothing卡尔曼滤波器对应的概率平滑方法
+Reinforcement learning强化学习，一个机器学习研究领域的概念
+Statistic统计量，用来对数据进行分析、检验的变量，总结数据的函数
+Summarize总结
+Vicious cycle恶性循环
+Advanced Spike Sorting
+LFP, ECoG, EMG prosthetic control
+Alzheimer’s disease老年痴呆症
+Annoying恼人的
+Anode阳极，电刺激系统里的正电极
+Auditory cortex听觉皮层
+Cathode阴极，电刺激系统里的负电极
+Commercialization商业化,商品化
+Contraction收缩
+Convulsions惊厥
+Credibility公信力
+Depression抑郁症
+Electroconvulsive therapy电惊厥疗法, 强烈脑部电刺激
+Emitter发射体
+Entrain 调制到同一频率上
+Exaggerated夸大的
+Excitability可激发性
+Fainting昏厥
+Focused ultrasound聚焦超声
+Hobbyist业余爱好者
+Induce感应
+Irritation刺激
+Liposuction吸脂术
+Migraine headaches偏头痛
+Parkinson’s disease帕金森氏病
+Phosphene幻视，电刺激造成的知觉
+Rehabilitation康复
+Regulation法规
+Reproducibility可重复性
+Sham假冒的
+Standardization标准化
+tACS经颅交流电刺激
+Tactile触觉
+tDCS经颅直流电刺激
+Temporal resolution时间分辨率
+Tinnitus耳鸣
+TMS经颅磁刺激
+Transcranial经颅
+tRNS经颅噪音刺激
+Ultrasound超声
+Actin肌动蛋白
+Anode阳极，电刺激系统里的正电极
+Anodal surround block在负电极旁边的虚拟正电极抑制动作电位的传导
+Anodic break正刺激（超极化）以后的去极化反弹
+Asymmetric非对称
+Atrium心房
+Atrophy萎缩
+Biphasic双相，正和负，时间上分开
+Bipolar双电极
+Cardiac pacemaker心脏起搏器
+Cathode阴极，电刺激系统里的负电极
+Central nervous system中枢神经系统
+Chronaxie时值，Rheobase X 2强度刺激多久才能导致动作电位
+Co-contraction同步收缩
+Contraction收缩
+Cosmetic美容用的
+Cuff electrode袖口形电极
+Depolarize去极化，提高电压，让神经元更容易发动作电位
+Electric field电场
+Epimysial肌肉外
+Epineurium外膜,神经纤维的最外层
+Excitation激发动作电位或让神经元更容易发动作电位
+Extensor伸肌
+Fascicle神经肌束，一组轴突
+Fast-twitch muscle快肌，较强，较低耐力
+Fatigue疲勞
+Flexor屈肌
+Functional Electrical Stimulation功能性电刺激, 恢复运动能力
+Hyperpolarize超极化，降低电压，让神经元更难发动作电位
+Hyperpolarization arrest膜电位超极化造成的抑制
+Induce导致
+Inhibition抑制,让神经元更难发动作电位
+Intrafascicular神经肌束内
+Intramuscular肌肉内
+Inverse recruitment order电刺激激活肌肉纤维的顺序,与自然激活顺序的相反
+Migraine headache偏头痛
+Monopolar单电极，第二电极在远处
+Motor point神经纤维进入肌肉的位置
+Motor unit运动单位,一个脊髓的运动神经元、它的轴突和它控制的肌肉纤维
+Myelin髓鞘,包围轴突的绝缘脂肪
+Myosin肌球蛋白
+Node of Ranvier郎飞氏结，两段髓鞘之间的空隙
+Paralyze麻痹
+Peripheral nervous system外周神经系统
+Perineurium神经束膜，神经肌束外层的薄膜
+Pulse脉冲,电刺激的单元
+Recruitment挑选激活哪些肌肉纤维的过程
+Rehabilitation康复训练
+Resistance电阻
+Rheobase基本电位，能导致动作电位的无限长度的刺激强度
+Sodium channel accommodation钠通道适应过程，钠通道对不同强度的电刺激的反应是非线性的
+Slow-twitch muscle慢肌，较弱，较高耐力
+Superposition叠加
+Strength-duration curve强度 - 持续时间曲线，表明在某强度下需要多长的刺激才能引发动作电位
+Tetanic contraction强直收缩，最强烈的收缩
+Threshold阈值
+Tripolar三电极
+Twitch抽搐，对各动作电位或刺激脉冲反应的收缩
+Urination排尿
+Ventricle心室
+Virtual虚拟
+Activation激活
+Apex顶点
+Auditory nerve听神经
+Band-pass filtering带通滤波, 过滤掉过低和过高的频率
+Basilar membrane基底膜，上有毛细胞
+Cochlea耳蜗
+Complications并发症
+Congenital先天
+Critical period关键时期，大脑发育过程中在关键时期缺乏听觉刺激会使语言能力一生都不能学到
+Diffuse扩散
+Eardrum耳鼓膜
+Electromotility对电压的运动反映
+Encode编码
+Endolymph内淋巴液，含较高的钾浓度
+Field steering用多电极的相对刺激强度造成新的虚拟电极
+Formant元音的共振峰，基频以上的峰频率
+Fundamental frequency基频
+Hair cell毛细胞,声音传感细胞
+Hearing aid助听器
+Inductance 电感，用于无线地传电能源
+Integral积分
+Interleaved交错，时间上分开
+Lip reading读唇
+Mechano-electrical transduction把运动转换成电压变化
+Meningitis脑膜炎
+Miniaturization微型化
+Organ of Corti耳蜗的皮质器官，Corti器，含毛细胞
+Ossicles听小骨，3个小骨，连接耳鼓膜和耳蜗的卵圆窗
+Oval window卵圆窗，耳蜗地窗口
+Perception知觉
+Phase information相位或时间信息
+Pitch音高
+Platinum-iridium铂-铱，电刺激的电极经常为这材料组成
+Post-lingually deafened学语言以后失去听力
+Pre-lingually deafened学语言以前失去听力
+Profoundly deaf严重失聪
+Pulse code脉冲编码
+Receptor potential感受器电位，纤毛上离子通道打开造成的膜电位
+Rectified整流的
+Resolution分辨率
+Rhythm韵律
+Scala media中阶，耳蜗的中层
+Scala tympani鼓阶，耳蜗的边层。耳蜗电极植入在这
+Signal processing信号处理
+Silicone rubber硅橡胶
+Stapedius muscle镫骨肌，镫骨是三听小骨之一。镫骨肌控制镫骨，减少大声刺激对内耳损坏
+Static electricity静电
+Stereocilia纤毛，毛细胞的运动传感器
+Substrate基板
+Tectorial membrane盖膜，毛细胞接触的薄膜
+Therapy治疗
+Tonotopic音频定位结构，各音频有相应的空间位置
+Transmitter发射机
+Vowel元音
+Artificial sight
+Acuity视敏度
+Affix固定
+Amacrine cell无长突细胞
+Averted vision余光, 用边缘视觉看微暗目标
+Bipolar cell双极细胞
+Choroid脉络膜
+Cones视锥细胞
+Cortical magnification在视觉皮层,负责处理黄斑的输入的区域比负责外围的区域会更大
+Epiretinal视网膜前
+Fovea视网膜的中央凹，视觉最清楚的地方
+Ganglion cell神经节细胞
+Glaucoma青光眼
+Horizontal cell水平细胞
+Lateral geniculate nucleus外侧膝状体
+Macula黄斑
+Macular degeneration黄斑变性
+Microphotodiode微型光电二极管，把光转换成电流
+Optic nerve视神经
+Periphery外围
+Phosphene幻视，电刺激造成的知觉
+Photoreceptor感光体
+Salient显著的，突出的
+Spatiotopic 与空间位置有对应
+Subretinal视网膜下的
+Retina视网膜
+Retinitis Pigmentosa视网膜色素变性
+Retinotopic与视网膜位置有对应
+Rods视杆细胞
+Sclera巩膜
+Transchoroidal视网膜和脉络膜后
+Ultrasound超声
+Uniformity均匀性
+Visual cortex视觉皮层
+Adaptation适应
+Conductivity电导率
+Cueing提示
+Current controlled 按电流控制电刺激的强度(对比: voltage controlled,按电压控制)
+Discrimination区别
+Inhibitory rebound抑制以后的激发反弹
+Mechanoreceptor机械感受细胞
+Optogenetics 用转基因技术给神经元加对光有反应的蛋白,让光能控制神经元的放电
+Postsynaptic突触后的
+Presynaptic突触前的
+Primary frequency刺激脉冲的频率（组内）
+Proprioception本体感觉，感觉四肢的位置
+Secondary frequency刺激脉冲组的频率（组的频率）
+Sensitivity敏感性
+Sensor传感器
+Somatosensory cortex体感皮层
+Spatio-temporal pattern时空模式
+Stump肢体残端
+Tactile触觉
+Texture质地
+Transcranial Magnetic Stimulation经颅磁刺激
+Ultrasound超声
+Virus病毒
+Voltage gradient电位梯度
+Anesthesia麻醉
+Chronic pain慢性疼痛
+Dementia痴呆
+Depression抑郁症
+Dopamine neurons多巴胺神经元
+Dystonia肌张力失常
+Essential tremor特发性震颤
+Gait步态
+Globus pallidus苍白球
+Iridium铱
+Medial forebrain bundle内侧前脑束
+Obsessive-compulsive disorder强迫症
+Parkinson’s disease帕金森氏病
+Platinum铂金
+Rigidity僵硬
+Substantia nigra黑质(脑区)
+Subthalamic nucleus丘脑底核
+Stereotactic frame立体定位框架
+Thalamus丘脑
+Tourette’s syndrome抽动 - 秽语综合征
+Absense / petit mal seizure癫痫小发作，一种普遍性发作
+Amnesia健忘症
+Awareness感知
+Confusion困惑
+Debilitating使人无法正常生活的
+Dehydration脱水
+Drowsiness睡意
+Drugs of abuse药物滥用
+ECoG皮层脑电图,颅骨下、脑面上的电极
+EEG脑电图，皮肤面上的电极
+Epilepsy癫痫
+Epileptiform癫痫样的
+Excessive过度
+Fatigue疲劳
+Fractal dimension分形维数，复杂形体不规则性的量度
+Generalized seizure普遍性发作，全脑发作
+Hallucination幻觉
+Hormone激素	
+Hypertension高血压
+Hyperventilation换气过度
+Imminent临头的
+Intermittent断断续续的
+Ketogenic diet生酮饮食，高脂、低碳水化合物和适当蛋白质的饮食
+Myoclonic seizure肌肉阵挛性发作，一种普遍性发作
+Nausea恶心
+Operable可施手术的
+Partial seizure部分性发作
+Phenobarbital苯巴比妥，一种常用的癫痫药
+Postictal state癫痫发作后状态
+Seizure癫痫发作, 惊厥
+Stress压力
+Stroke中风
+Symptom症状
+Synchronous同步的
+Tonic-clonic / grand mal seizure强直 - 阵挛性发作，一种严重的普遍性发作
+Trauma创伤
+Tumor肿瘤
+Unprovoked无端
+Vagus nerve迷走神经
