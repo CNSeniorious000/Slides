@@ -1,9 +1,8 @@
 from contextlib import suppress
-from threading import Thread
 from functools import cache
 from thefuzz import process
 from pyperclip import copy
-from time import sleep
+from rich import *
 import os, sys
 sys.path.append(rf"{os.path.dirname(__file__)}\..\..")
 from core.everything import *
@@ -49,7 +48,7 @@ class MainForm(UI):
         self.add(vbox)
         vbox.padding = after_scale(12)
         vbox.aliment = "fill horz"
-        [vbox.add(Button(" "*30, space=0.5)) for _ in range(n_results)]
+        [vbox.add(Button(" "*30, auto=True, space=0.5)) for _ in range(n_results)]
         buttons = vbox.get_children()[1:]
         callback = lambda widget: copy(widget.foreground.text)
         [button.push_handlers(on_click=callback) for button in buttons]
@@ -59,17 +58,15 @@ class MainForm(UI):
             nonlocal last
             if last != (this := text_field.get_text()):
                 last = this
-                print(this)
                 for i, result in enumerate(search(this)):
                     match, score = result
                     try:
                         buttons[i].get_foreground().set_text(f"{match} @ {score}")
                     except Exception as e:
-                        print(e.args)
-            sleep(1/30)
+                        print(*e.args)
 
         self.callbacks.append(update)
-
+        # update()
         #
         # try:
         #     self.add(vbox)
