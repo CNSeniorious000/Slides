@@ -7,14 +7,21 @@ import os, sys
 sys.path.append(rf"{os.path.dirname(__file__)}\..\..")
 from core.everything import *
 
+max_length = 50
 n_results = 10
 with suppress(ValueError):
     n_results = int(sys.argv[-1])
 
-glossary = open("glossary.txt", "rb").read().decode().split("\r\n")
+glossary = []
 search = cache(lambda text: process.extractBests(text, glossary, limit=n_results))
 # after_scale = lambda *args: args[0] if len(args) == 1 else args
-
+for string in open("glossary.txt", "rb").read().decode().split("\r\n"):
+    for i, char in enumerate(string):
+        if ord(char) > ord('z'):
+            left, right = string[:i], string[i:]
+            print(f"[green]{left}[red]:[cyan]{right}")
+            glossary.append(f"{left.strip()} {right.strip()}"[:max_length])
+            break
 
 class VueForm(glooey.Form):
     custom_alignment = "fill horz"
@@ -61,9 +68,14 @@ class MainForm(UI):
                 for i, result in enumerate(search(this)):
                     match, score = result
                     try:
-                        buttons[i].get_foreground().set_text(f"{match} @ {score}")
+                        button: Button = buttons[i]
+                        label = button.get_foreground()
+                        label.set_color((*preset.used().text_color[:3], 55 + score * 2))
+                        print(f"{label.get_color() = }")
+                        label.set_text(f"{match}")
                     except Exception as e:
                         print(*e.args)
+                        print(f"len({match!r}) = {len(match)}")
 
         self.callbacks.append(update)
 

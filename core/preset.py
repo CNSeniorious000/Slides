@@ -21,7 +21,7 @@ class MiSans(VariableFont):
                 "MiSans Semibold",
                 "MiSans Bold",
                 "MiSans Heavy",
-            ], 2, 7
+            ], 3, 7
         )
 
 
