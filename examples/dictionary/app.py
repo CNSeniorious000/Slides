@@ -46,7 +46,7 @@ class Button(BoldButton):
         custom_alignment = "left"
 
 
-class MainForm(UI):
+class MainWindow(UI):
     custom_size_hint = after_scale(600, 48 * n_results)
 
     def __init__(self):
@@ -60,7 +60,7 @@ class MainForm(UI):
         callback = lambda widget: copy(widget.foreground.text)
         [button.push_handlers(on_click=callback) for button in buttons]
         last = ""
-
+        
         def update():
             nonlocal last
             if last != (this := text_field.get_text()):
@@ -78,8 +78,15 @@ class MainForm(UI):
                         print(f"len({match!r}) = {len(match)}")
 
         self.callbacks.append(update)
+        
+        # def record():
+        #     nonlocal i
+        #     i += 1
+        #     pyglet.image.get_buffer_manager().get_color_buffer().save(f'{i}.png')
+        # i = 0
+        # self.callbacks.append(record)
 
 
 if __name__ == '__main__':
-    with preset.Vue.using(), MainForm():
+    with preset.Vue.using(), MainWindow():
         pass
