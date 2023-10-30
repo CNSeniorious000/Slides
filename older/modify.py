@@ -26,7 +26,10 @@ def style_reverse(name, size=None, color=(179,55,55)):
 
     s = animation(255)
 
-    out = [np.tile(np.array([*color, 0], np.uint8), w*h).reshape((h,w,4)) for i in s]
+    out = [
+        np.tile(np.array([*color, 0], np.uint8), w * h).reshape((h, w, 4))
+        for _ in s
+    ]
     for i, j in enumerate(s):
         j /= 255
         out[i][..., 3] = a * j + b * (1 - j)
@@ -43,7 +46,10 @@ def style_layer(name, size=None, color=(55,179,179)):
 
     s = animation(255)
 
-    out = [np.tile(np.array([*color, 0], np.uint8), w*h).reshape((h,w,4)) for i in s]
+    out = [
+        np.tile(np.array([*color, 0], np.uint8), w * h).reshape((h, w, 4))
+        for _ in s
+    ]
     for i, j in enumerate(s):
         j /= 255
         out[i][..., 3] = b + 0.25 * a * j
@@ -59,7 +65,10 @@ def style_fill(name, size=None, color=(55,179,55)):
 
     s = animation(w)
 
-    out = [np.tile(np.array([*color, 0], np.uint8), w*h).reshape((h,w,4)) for i in s]
+    out = [
+        np.tile(np.array([*color, 0], np.uint8), w * h).reshape((h, w, 4))
+        for _ in s
+    ]
     for i, j in enumerate(s):
         out[i][..., 3] = b
         out[i][:, :j, 3] = a[:, :j]
@@ -78,7 +87,7 @@ def blend_fill(name, size=None):
 
     s = animation(w)
 
-    out = [np.zeros([h, w, c], np.uint8) for i in s]
+    out = [np.zeros([h, w, c], np.uint8) for _ in s]
     for i, j in enumerate(s):
         out[i][:] = a
         out[i][:, -1-j:] = b[:, -1-j:]
@@ -95,7 +104,7 @@ def blend_alpha(name, size=None):
 
     s = animation(255)
 
-    out = [np.zeros([h, w, c], np.uint8) for i in s]
+    out = [np.zeros([h, w, c], np.uint8) for _ in s]
     for i, j in enumerate(s):
         j /= 255
         out[i][:] = b * j + a * (1 - j)
