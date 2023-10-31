@@ -149,12 +149,7 @@ class UI:
         h, w = images[0].shape[:2]
         x, y = pos
 
-        imgs = []
-        for image in images:
-            imgs.append(pg.image.frombuffer(
-                image, (w, h), "RGBA")
-            )
-
+        imgs = [pg.image.frombuffer(image, (w, h), "RGBA") for image in images]
         if radius:
             for img in imgs:
                 tailor(pg.surfarray.pixels_alpha(img), radius)
@@ -190,7 +185,8 @@ class UI:
 
     def main(self):
         hovering_button = pressed_button = None
-        hovering_button:Button; pressed_button:Button
+        hovering_button:Button
+        pressed_button:Button
 
         last_mouse_pos = None
 
@@ -203,10 +199,7 @@ class UI:
                         break
                     elif hovering_button:
                         hovering_button.situation = standby
-                    if button is pressed_button:
-                        button.situation = pressing
-                    else:
-                        button.situation = hovering
+                    button.situation = pressing if button is pressed_button else hovering
                     hovering_button = button
                     break
             else:
@@ -235,8 +228,8 @@ class UI:
             else:
                 pg.mouse.set_cursor(0)
 
-            if self.drag:
-                if mouse.position() != last_mouse_pos:
+            if mouse.position() != last_mouse_pos:
+                if self.drag:
                     dx = ...
 
 
